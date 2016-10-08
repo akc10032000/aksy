@@ -11,7 +11,7 @@ config = {'name':           'Asky',
             ),
         'author':           'Abhishek Kumar',
         'author_email':     'akc10032000@gmail.com',
-        'scripts':          'bin/asky',
+        'scripts':          'asky',
         'license':          'GNU GPL version 3 or newer',
 }
 
