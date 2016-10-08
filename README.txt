@@ -26,7 +26,9 @@ Case-in/sensitives, etc., without creating a special case.
 
     1. Installing Asky
 
-Very simple. Clone Asky from GitHub (https://github.com/akc10032000/asky/), extract all files and in the main directory run python3 setup.py install as root, like this:
+Very simple. Clone Asky from GitHub (https://github.com/akc10032000/asky/), 
+extract all files and in the main directory run python3 setup.py install as
+root, like this:
 
     $ sudo python3 setup.py install
     
