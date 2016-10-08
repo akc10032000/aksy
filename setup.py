@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 config = {'name':           'Asky',
-        'version':          '0.1',
+        'version':          'v1.0',
         'description':      'Ask questions and check correctness.',
         'long_description': ('Asky asks questions and checks if the answers '
             'given by the user are correct. Asky must be given two separate '
