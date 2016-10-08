@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+
+'''
+Asky is a simple Python script to ask questions from one file, get user
+input, and check if the supplied input matches the corresponding line in
+another file.
+'''
+
+
+from re import match
+from sys import argv, stderr, exit
+from os.path import exists
+
+
+if len(argv) != 3:
+    print("Asky: Usage: {} questions_file answers_file".format(argv[0]),
+            file=stderr)
+    exit(1)
+elif (not exists(argv[1])) or (not exists(argv[2])):
+    print("Aksy: Error: The file/s provided don't exists.", file=stderr)
+    exit(1)
+
+
+PROMPT = '> '
+
+try:
+    with open(argv[1]) as qf, open(argv[2]) as af:
+        for (q, a) in zip(qf, af):
+            print(q)
+            answer = input(PROMPT).strip()
+            if match(a.strip(), answer):
+                print("Correct!")
+            else:
+                print("Wrong: {}".format(a))
+except IOError as err:
+    print("Asky: Error: {}".format(err))
+    exit(1)
+except (EOFError, KeyboardInterrupt):
+    exit()
