@@ -19,11 +19,18 @@ Case-in/sensitives, etc., without creating a special case.
 
     TOC
 
-1. Using Asky
-2. Creating custom QA-pairs
-3. Thanks
+1. Installing Asky
+2. Using Asky
+3. Creating custom QA-pairs
+4. Thanks
 
-    1. Using Asky
+    1. Installing Asky
+
+Very simple. Clone Asky from GitHub (https://github.com/akc10032000/asky/), extract all files and in the main directory run python3 setup.py install as root, like this:
+
+    $ sudo python3 setup.py install
+    
+    2. Using Asky
 
 Asky is used from the command line. To run Asky, do this:
 
@@ -34,7 +41,7 @@ QA-pair is provided with Asky, so you can do this which will work.
 
     $ aksy Q A
 
-    2. Creating custom QA-pairs
+    3. Creating custom QA-pairs
 
 The example QA-pair included is fairly self-explanatory, but still here is an
 informal tutorial for n00bs (just kidding!).
@@ -48,7 +55,7 @@ Note: The first line in the A file is the answer to the question in the first
 line of the Q file, same rule applies for the second, third and following
 lines.
 
-    3. Thanks
+    4. Thanks
 
 Thanks for using Asky. If you have any suggestion, request, complain, etc.,
 drop me a mail at akc10032000 [ __AT__ ] gmail [__DOT__] [ __COM__ ].
