@@ -41,8 +41,8 @@ except IOError as err:
     exit(1)
 except (EOFError, KeyboardInterrupt):
     if ntotal:
-        print("{:.1f}%".format(ncorrect / ntotal))
+        print("{:.1f}%".format(ncorrect / ntotal * 100.0))
     exit()
 
 if ntotal:
-    print("{:.1f}%".format(ncorrect / ntotal))
+    print("{:.1f}%".format(ncorrect / ntotal * 100.0))
