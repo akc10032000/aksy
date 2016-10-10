@@ -22,18 +22,27 @@ elif (not exists(argv[1])) or (not exists(argv[2])):
 
 
 PROMPT = '> '
+ntotal = 0
+ncorrect = 0
 
 try:
     with open(argv[1]) as qf, open(argv[2]) as af:
         for (q, a) in zip(qf, af):
+            ntotal += 1
             print(q)
             answer = input(PROMPT).strip()
             if match(a.strip(), answer):
                 print("Correct!")
+                ncorrect += 1
             else:
                 print("Wrong: {}".format(a))
 except IOError as err:
     print("Asky: Error: {}".format(err))
     exit(1)
 except (EOFError, KeyboardInterrupt):
+    if ntotal:
+        print("{:.1f}%".format(ncorrect / ntotal))
     exit()
+
+if ntotal:
+    print("{:.1f}%".format(ncorrect / ntotal))
