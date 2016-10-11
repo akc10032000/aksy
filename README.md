@@ -8,8 +8,9 @@ Given two files on the command-line, Asky asks the question from the
 first file, takes user's input, and checks the user's answer against
 the RegEx in the second file printing either correct or the correct
 answer. Because the answers file uses RegEx, Asky can be used to
-practice a wide range of question types; aksing MCQs are really made
-easy using Asky.
+practice a wide range of question types; questions with multiple correct
+answers, ignoring case, answers of a certain pattern, etc., are really
+made easy using Asky.
 
 ## Installing Asky
 
